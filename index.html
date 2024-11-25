@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños, Daniela!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🎉 ¡Feliz Cumpleaños, Daniela! 🎉</h1>
+    </header>
+    <main>
+        <section class="message">
+            <p>
+                Le deseo todo el éxito en la vida y que cumplas muchos años más rodeada de las personas que te quieren. Que cada día esté lleno de momentos felices y grandes logros.
+            </p>
+        </section>
+        <section class="gallery">
+            <h2> Le deseo lo mejor!</h2>
+            <div class="images">
+                <img src="imagen1.jpg" alt="Daniela 1">
+                <img src="imagen4.jpg" alt="Daniela 2">
+                <img src="imagen3.jpg" alt="Daniela 3">
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2024 - Daniela Cordova. Diseñado con 💜 </p>
+        </footer>
+    </main>
+
+    <!-- El script de confeti aquí, para que se ejecute después de cargar la página -->
+    <script>
+        window.onload = function() {
+            for (let i = 0; i < 150; i++) {
+                let confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.left = `${Math.random() * 100}vw`;  /* Posición aleatoria en el eje X */
+                confetti.style.animationDuration = `${Math.random() * 3 + 3}s`;  /* Duración aleatoria */
+                confetti.style.animationDelay = `${Math.random() * 2}s`;  /* Retraso aleatorio */
+                document.body.appendChild(confetti);
+
+                // Eliminar confeti después de su animación
+                confetti.addEventListener('animationend', () => confetti.remove());
+            }
+        }
+    </script>
+</body>
+</html>
