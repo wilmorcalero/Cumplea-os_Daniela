@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -49,6 +50,7 @@ main {
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
+    flex-wrap: wrap; /* Permite que las imágenes se acomoden en varias filas */
 }
 
 .images img {
@@ -56,6 +58,11 @@ main {
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.images img:hover {
+    transform: scale(1.1); /* Efecto al pasar el mouse sobre las imágenes */
 }
 
 footer {
@@ -107,5 +114,48 @@ footer {
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+/* Consultas de medios para mejorar la adaptación a dispositivos móviles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .message {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .images img {
+        width: 150px; /* Las imágenes se vuelven más pequeñas en pantallas más pequeñas */
+    }
+
+    .gallery h2 {
+        font-size: 1.2rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .message {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .images img {
+        width: 120px; /* Las imágenes se vuelven aún más pequeñas */
+    }
+
+    footer {
+        font-size: 0.7rem;
     }
 }
